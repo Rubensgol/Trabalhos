@@ -19,21 +19,6 @@ namespace SistemaCsharpComTela
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Op2_Checked(object sender, RoutedEventArgs e)
         {
             x13.Visibility = Visibility.Visible;
@@ -157,15 +142,61 @@ namespace SistemaCsharpComTela
             listaparadas.Visibility = Visibility.Hidden;
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Jacobbiop_Checked(object sender, RoutedEventArgs e)
         {
             listaparadas.Visibility = Visibility.Visible;
             opparada.SelectedIndex = 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int tamanho = 2;
+            if (op3.IsChecked == true)
+                tamanho = 4;
+            else if (op2.IsChecked == true)
+                tamanho = 3;
+            else if (op1.IsChecked == true)
+                tamanho = 2;
+
+            double[,] a = new double[tamanho, tamanho];
+            double[] b = new double[tamanho];
+           
+                a[0, 0] = double.Parse(x11.Text);
+                a[0, 1] = double.Parse(x21.Text);
+                a[1, 0] = double.Parse(x12.Text);
+                a[1, 1] = double.Parse(x22.Text);
+                b[0] = double.Parse(y1.Text);
+                b[1] = double.Parse(y2.Text);
+                if(tamanho==3)
+                {
+                    a[0, 2] = double.Parse(x31.Text);
+                    a[1, 2] = double.Parse(x32.Text);
+                    a[2, 0] = double.Parse(x13.Text);
+                    a[2, 1] = double.Parse(x23.Text);
+                    a[2, 2] = double.Parse(x33.Text);
+                    b[2] = double.Parse(y3.Text);                  
+                }
+                if(tamanho==4)
+                {
+                    a[0, 3] = double.Parse(x14.Text);
+                    a[1, 3] = double.Parse(x24.Text);
+                    a[3, 0] = double.Parse(x41.Text);
+                    a[3, 1] = double.Parse(x42.Text);
+                    a[3, 2] = double.Parse(x43.Text);
+                    a[3, 3] = double.Parse(x44.Text);
+                    a[2, 3] = double.Parse(x34.Text);
+                    b[3] = double.Parse(y4.Text);
+                }
+                CalculaSistemaLinear calcula = new CalculaSistemaLinear();
+                double[] c = new double[tamanho];
+                c = calcula.Eliminacao(a, b);
+                MessageBox.Show("Test");
+          
+        }
+
+        private void X21_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

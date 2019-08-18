@@ -9,11 +9,11 @@
     <Grid Margin="0,0,0,0" Background="#FF5B8FFF">
         <TextBox x:Name="x12" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Margin="10,90,0,0"/>
         <TextBox x:Name="x11" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Margin="10,40,0,0"/>
-        <TextBox x:Name="x21" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Margin="80,40,0,0"/>
+        <TextBox x:Name="x21" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Margin="80,40,0,0" RenderTransformOrigin="0.625,0.375" TextChanged="X21_TextChanged"/>
         <TextBox x:Name="x22" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" Margin="80,90,0,0"/>
         <TextBox x:Name="y1" TextWrapping="Wrap" Text="" Margin="295,40,0,0" HorizontalAlignment="Left" Width="80" Height="40" VerticalAlignment="Top"/>
         <TextBox x:Name="y2" TextWrapping="Wrap" Text="" Margin="295,90,0,0" HorizontalAlignment="Left" Width="80" Height="40" VerticalAlignment="Top"/>
-        <Button Content="Calcular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,348,0,0" Click="Button_Click" Background="#FF77FFEC"/>
+        <Button Content="Calcular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,348,0,0" Background="#FF77FFEC" Click="Button_Click"/>
         <Label HorizontalAlignment="Left" Margin="15,92,0,0" VerticalAlignment="Top"/>
         <Label Content="X1" Margin="10,10,0,0" HorizontalAlignment="Left" Width="24" RenderTransformOrigin="0.625,1.423" Height="26" VerticalAlignment="Top"/>
         <Label Content="x2&#xD;&#xA;" HorizontalAlignment="Left" Margin="80,10,0,0" RenderTransformOrigin="0.249,0.766" Height="42" VerticalAlignment="Top"/>
@@ -44,7 +44,7 @@
         <Label x:Name="labely4" Content="y4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="269,190,0,0"/>
         <TextBox x:Name="y4" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Margin="295,190,0,0" RenderTransformOrigin="-0.725,0.575"/>
         <Button Content="Sair" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,382,0,0" Click="Button_Click_2" Background="#FFD3F303"/>
-        <ListBox HorizontalAlignment="Left" Height="47" Margin="118,266,0,0" VerticalAlignment="Top" Width="116" Background="#FF5B8FFF" SelectionChanged="ListBox_SelectionChanged">
+        <ListBox HorizontalAlignment="Left" Height="47" Margin="118,266,0,0" VerticalAlignment="Top" Width="116" Background="#FF5B8FFF" >
             <RadioButton x:Name="gaussop" Content="Gauss" Checked="Gaussop_Checked"/>
             <RadioButton x:Name="jacobbiop" Content="Jacobbi" Checked="Jacobbiop_Checked"/>
         </ListBox>
