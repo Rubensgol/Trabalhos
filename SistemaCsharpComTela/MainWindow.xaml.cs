@@ -13,7 +13,7 @@ namespace SistemaCsharpComTela
         public MainWindow()
         {
             InitializeComponent();
-
+            gaussop.IsChecked = true;
             op1.IsChecked = true;
 
 
@@ -118,18 +118,54 @@ namespace SistemaCsharpComTela
             labely4.Visibility = Visibility.Visible;
 
 
-            labely1.Margin = new Thickness(300, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
-            labely2.Margin = new Thickness(300, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
-            labely3.Margin = new Thickness(300, labely3.Margin.Top, labely3.Margin.Right, labely3.Margin.Bottom);
+            labely1.Margin = new Thickness(269, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
+            labely2.Margin = new Thickness(269, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
+            labely3.Margin = new Thickness(269, labely3.Margin.Top, labely3.Margin.Right, labely3.Margin.Bottom);
 
-            y1.Margin = new Thickness(322, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
-            y2.Margin = new Thickness(322, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
-            y3.Margin = new Thickness(322, labely3.Margin.Top, labely3.Margin.Right, labely3.Margin.Bottom);
+            y1.Margin = new Thickness(295, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
+            y2.Margin = new Thickness(295, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
+            y3.Margin = new Thickness(295, labely3.Margin.Top, labely3.Margin.Right, labely3.Margin.Bottom);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Opparada_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(opparada.SelectedIndex==0)
+            {
+
+                errolabel.Visibility = Visibility.Hidden;
+                errotxt.Visibility = Visibility.Hidden;
+                qtdlinhalabel.Visibility = Visibility.Visible;
+                qtdlinhatxt.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                errolabel.Visibility = Visibility.Visible;
+                errotxt.Visibility = Visibility.Visible;
+                qtdlinhalabel.Visibility = Visibility.Hidden;
+                qtdlinhatxt.Visibility = Visibility.Hidden;
+            }
+
+        }
+
+        private void Gaussop_Checked(object sender, RoutedEventArgs e)
+        {
+            listaparadas.Visibility = Visibility.Hidden;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Jacobbiop_Checked(object sender, RoutedEventArgs e)
+        {
+            listaparadas.Visibility = Visibility.Visible;
+            opparada.SelectedIndex = 0;
         }
     }
 }
