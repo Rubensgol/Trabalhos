@@ -188,9 +188,11 @@ namespace SistemaCsharpComTela
                     b[3] = double.Parse(y4.Text);
                 }
                 CalculaSistemaLinear calcula = new CalculaSistemaLinear();
+                Jacobbi jacobbi = new Jacobbi();
                 double[] c = new double[tamanho];
-                c = calcula.Eliminacao(a, b);
-                MessageBox.Show("Test");
+                c=jacobbi.SolucaoErro(b, a, 10);
+                //c = calcula.Eliminacao(a, b);
+                MessageBox.Show("teste");
           
         }
 
