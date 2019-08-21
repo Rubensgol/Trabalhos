@@ -15,8 +15,6 @@ namespace SistemaCsharpComTela
             InitializeComponent();
             gaussop.IsChecked = true;
             op1.IsChecked = true;
-
-
         }
 
         private void Op2_Checked(object sender, RoutedEventArgs e)
@@ -31,8 +29,6 @@ namespace SistemaCsharpComTela
             labelx3.Visibility = Visibility.Visible;
             labely3.Visibility = Visibility.Visible;
 
-
-
             labelx4.Visibility = Visibility.Hidden;
             x14.Visibility = Visibility.Hidden;
             x24.Visibility = Visibility.Hidden;
@@ -43,7 +39,6 @@ namespace SistemaCsharpComTela
             x42.Visibility = Visibility.Hidden;
             x43.Visibility = Visibility.Hidden;
             x44.Visibility = Visibility.Hidden;
-
 
             labely1.Margin = new Thickness(240, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
             labely2.Margin = new Thickness(240, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
@@ -102,7 +97,6 @@ namespace SistemaCsharpComTela
             y4.Visibility = Visibility.Visible;
             labely4.Visibility = Visibility.Visible;
 
-
             labely1.Margin = new Thickness(269, labely1.Margin.Top, labely1.Margin.Right, labely1.Margin.Bottom);
             labely2.Margin = new Thickness(269, labely2.Margin.Top, labely2.Margin.Right, labely2.Margin.Bottom);
             labely3.Margin = new Thickness(269, labely3.Margin.Top, labely3.Margin.Right, labely3.Margin.Bottom);
@@ -121,7 +115,6 @@ namespace SistemaCsharpComTela
         {
             if(opparada.SelectedIndex==0)
             {
-
                 errolabel.Visibility = Visibility.Hidden;
                 errotxt.Visibility = Visibility.Hidden;
                 qtdlinhalabel.Visibility = Visibility.Visible;
@@ -151,6 +144,7 @@ namespace SistemaCsharpComTela
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int tamanho = 2;
+            //carica jesus cade os {}
             if (op3.IsChecked == true)
                 tamanho = 4;
             else if (op2.IsChecked == true)
@@ -193,12 +187,10 @@ namespace SistemaCsharpComTela
                 c=jacobbi.SolucaoErro(b, a, 10);
                 //c = calcula.Eliminacao(a, b);
                 MessageBox.Show("teste");
-          
         }
 
         private void X21_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
     }
 }

@@ -38,17 +38,13 @@ namespace SistemaCsharpComTela
                     stringBuilder.Append(String.Format("Linha {0}:", k));
                     for (int i = 0; i < b.Length; i++)
                     {
-
                         anterior[i] = usaroutros[i, i] * b[i];
-            
                     }
-
                 }
                 else
                 {
                     for (int i = 0; i < b.Length; i++)
                     {
-
                         double sum = 0;
                         for (int j = 0; j < b.Length; j++)
                         {
@@ -60,14 +56,10 @@ namespace SistemaCsharpComTela
                         anterior[i] = usaroutros[i,i] * (b[i] + (sum));
                         stringBuilder.Append(String.Format("x{0}: é", i, anterior[i]));
                     }
-
                 }
                 k++;
             }
-
             return anterior;
         }
-
-
     }
 }

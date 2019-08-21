@@ -2,7 +2,6 @@
 {
     class CalculaSistemaLinear
     {
-
         public double[] Resolucao(double[,] a, double[] b)
         {
             double[] result = new double[b.Length];
@@ -17,16 +16,12 @@
                 }
                 result[i] = (b[i] - s) / a[i,i];
             }    
-
             return result;
-
         }
+
         public double[] Eliminacao(double[,] a, double[] b)
         {
             double m;
-            /*
-            
-            */
             int h = a.Length;
             for (int k = 0; k < a.GetLength(0) - 1; k++)
             {
@@ -42,13 +37,6 @@
                 }
             }
             return Resolucao(a, b);
-
         }
-
-
-
-
-
-
     }
 }
