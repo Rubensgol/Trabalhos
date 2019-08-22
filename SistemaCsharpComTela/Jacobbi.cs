@@ -57,7 +57,7 @@ namespace SistemaCsharpComTela
                                 sum +=usaroutros[i,j] * anterior[j];
                             }
                         }
-                        anterior[i] = usaroutros[i,i] * (b[i] + (sum));
+                        anterior[i] = Math.Round(usaroutros[i,i] * (b[i] + (sum)));
                         stringBuilder.Append(String.Format("x{0}: é", i, anterior[i]));
                     }
 

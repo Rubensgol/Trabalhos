@@ -1,6 +1,6 @@
 ﻿namespace SistemaCsharpComTela
 {
-    class CalculaSistemaLinear
+    class Gauss
     {
 
         public double[] Resolucao(double[,] a, double[] b)
@@ -11,12 +11,12 @@
             for (int i = b.Length - 1; i > -1; i--)
             {
                 s = 0;
-                for (int j = i+1; j < b.Length; j++)
+                for (int j = i + 1; j < b.Length; j++)
                 {
-                    s = s + a[i,j] * result[j];
+                    s = s + a[i, j] * result[j];
                 }
-                result[i] = (b[i] - s) / a[i,i];
-            }    
+                result[i] = (b[i] - s) / a[i, i];
+            }
 
             return result;
 
@@ -33,10 +33,10 @@
                 for (int i = k + 1; i < a.GetLength(0); i++)
                 {
                     m = a[i, k] / a[k, k];
-                    a[i,k] = 0;
+                    a[i, k] = 0;
                     for (int j = k + 1; j < b.Length; j++)
                     {
-                        a[i,j] = a[i,j] - (m * a[k,i]);
+                        a[i, j] = a[i, j] - (m * a[k, i]);
                     }
                     b[i] = b[i] - (b[k] * m);
                 }

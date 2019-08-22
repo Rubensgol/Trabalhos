@@ -167,7 +167,7 @@ namespace SistemaCsharpComTela
                 a[1, 1] = double.Parse(x22.Text);
                 b[0] = double.Parse(y1.Text);
                 b[1] = double.Parse(y2.Text);
-                if(tamanho==3)
+                if(tamanho==3 || tamanho==4)
                 {
                     a[0, 2] = double.Parse(x31.Text);
                     a[1, 2] = double.Parse(x32.Text);
@@ -178,20 +178,20 @@ namespace SistemaCsharpComTela
                 }
                 if(tamanho==4)
                 {
-                    a[0, 3] = double.Parse(x14.Text);
-                    a[1, 3] = double.Parse(x24.Text);
-                    a[3, 0] = double.Parse(x41.Text);
-                    a[3, 1] = double.Parse(x42.Text);
-                    a[3, 2] = double.Parse(x43.Text);
+                    a[0, 3] = double.Parse(x41.Text);
+                    a[1, 3] = double.Parse(x42.Text);
+                    a[3, 0] = double.Parse(x14.Text);
+                    a[3, 1] = double.Parse(x24.Text);
+                    a[3, 2] = double.Parse(x34.Text);
                     a[3, 3] = double.Parse(x44.Text);
-                    a[2, 3] = double.Parse(x34.Text);
+                    a[2, 3] = double.Parse(x43.Text);
                     b[3] = double.Parse(y4.Text);
                 }
-                CalculaSistemaLinear calcula = new CalculaSistemaLinear();
+                Gauss calcula = new Gauss();
                 Jacobbi jacobbi = new Jacobbi();
                 double[] c = new double[tamanho];
-                c=jacobbi.SolucaoErro(b, a, 10);
-                //c = calcula.Eliminacao(a, b);
+                 // c=jacobbi.SolucaoErro(b, a, 15);
+                 c = calcula.Eliminacao(a, b);
                 MessageBox.Show("teste");
           
         }
