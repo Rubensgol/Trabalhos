@@ -19,9 +19,11 @@ namespace SistemaCsharpComTela
     /// </summary>
     public partial class JanelaJacobbi : Window
     {
+        
         public JanelaJacobbi()
         {
             InitializeComponent();
+          
         }
     }
 }

@@ -187,12 +187,23 @@ namespace SistemaCsharpComTela
                     a[2, 3] = double.Parse(x43.Text);
                     b[3] = double.Parse(y4.Text);
                 }
-                Gauss calcula = new Gauss();
+                
+
+            if (jacobbiop.IsChecked == true)
+            {
                 Jacobbi jacobbi = new Jacobbi();
-                double[] c = new double[tamanho];
-                 // c=jacobbi.SolucaoErro(b, a, 15);
-                 c = calcula.Eliminacao(a, b);
-                MessageBox.Show("teste");
+                JanelaJacobbi jacobbi1 = new JanelaJacobbi();
+                jacobbi1.txttela.Text = jacobbi.SolucaoErro(b, a, 15);
+                jacobbi1.ShowDialog();
+            }
+            // c = calcula.Eliminacao(a, b);
+            if (determinanteop.IsChecked == true)
+            {
+                Gauss calcula = new Gauss();
+                double det = calcula.Determinante(a, b);
+                _ = MessageBox.Show("O determinante é" + det.ToString());
+            }
+            
           
         }
 

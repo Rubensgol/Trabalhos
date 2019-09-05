@@ -17,22 +17,18 @@
                 }
                 result[i] = (b[i] - s) / a[i, i];
             }
-
             return result;
-
         }
-        public double[] Eliminacao(double[,] a, double[] b)
+        public double[,] Eliminacao(double[,] a, double[] b)
         {
-            double m;
-            /*
             
-            */
-            int h = a.Length;
+            double m;
             for (int k = 0; k < a.GetLength(0) - 1; k++)
             {
                 for (int i = k + 1; i < a.GetLength(0); i++)
                 {
                     m = a[i, k] / a[k, k];
+                    
                     a[i, k] = 0;
                     for (int j = k + 1; j < b.Length; j++)
                     {
@@ -41,8 +37,20 @@
                     b[i] = b[i] - (b[k] * m);
                 }
             }
-            return Resolucao(a, b);
 
+
+    
+            return a;
+        }
+        public double Determinante(double[,]a,double[]b)
+        {
+            double totm = 1;
+            double[,] c = Eliminacao(a, b);
+            for (int i = 0; i < b.Length; i++)
+            {
+                totm *= a[i, i];
+            }
+            return totm;
         }
 
 

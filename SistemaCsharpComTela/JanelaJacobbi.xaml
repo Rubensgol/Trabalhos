@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="JanelaJacobbi" Height="450" Width="800">
     <Grid>
-        <TextBlock TextWrapping="Wrap" Margin="0,0,0,0"><InlineUIContainer>
+        <TextBlock x:Name="txttela" TextWrapping="Wrap"><InlineUIContainer>
                 
             </InlineUIContainer></TextBlock>
         <Label Content="Linhas" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -15,10 +15,10 @@
         <Label Content="x2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,0,0,0"/>
         <Label Content="x3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,0,0,0"/>
         <Label Content="x4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,0,0,0"/>
-        
-        <Label Content="x1e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,0,0,0"/>
-        <Label Content="x2e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="280,0,0,0"/>
-        <Label Content="x3e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,0,0,0"/>
-        <Label Content="x4e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="340,0,0,0"/>
+
+        <Label Content="x1e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,0,0,0"/>
+        <Label Content="x2e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,0,0,0"/>
+        <Label Content="x3e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="352,0,0,0"/>
+        <Label Content="x4e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="382,0,0,0"/>
     </Grid>
 </Window>
