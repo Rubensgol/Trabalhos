@@ -1,0 +1,24 @@
+﻿<Window x:Class="SistemaCsharpComTela.JanelaJacobbi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaCsharpComTela"
+        mc:Ignorable="d"
+        Title="JanelaJacobbi" Height="450" Width="800">
+    <Grid>
+        <TextBlock x:Name="txttela" TextWrapping="Wrap"><InlineUIContainer>
+                
+            </InlineUIContainer></TextBlock>
+        <Label Content="Linhas" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="x1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,0,0,0"/>
+        <Label Content="x2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,0,0,0"/>
+        <Label Content="x3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,0,0,0"/>
+        <Label Content="x4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,0,0,0"/>
+
+        <Label Content="x1e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,0,0,0"/>
+        <Label Content="x2e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="322,0,0,0"/>
+        <Label Content="x3e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="352,0,0,0"/>
+        <Label Content="x4e" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="382,0,0,0"/>
+    </Grid>
+</Window>

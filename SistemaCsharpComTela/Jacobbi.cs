@@ -8,14 +8,16 @@ namespace SistemaCsharpComTela
 {
     class Jacobbi
     {
-        public double[] SolucaoErro(double[] b, double[,] a, double erro)
+        public String SolucaoErro(double[] b, double[,] a, double erro)
         {
             StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(Environment.NewLine);
+            stringBuilder.Append(Environment.NewLine);  
             double er = erro + 1;
             double[] inicial = new double[b.Length];
             double[] anterior = new double[b.Length];
             double[,] usaroutros = new double[b.Length, b.Length];
-            
+            double erros ;
             for (int i = 0; i < b.Length; i++)
             {
                 for (int j = 0; j < b.Length; j++)
@@ -33,16 +35,21 @@ namespace SistemaCsharpComTela
             int k = 0;
             while(k < erro)
             {
+                stringBuilder.Append(String.Format("{0}     ",k));
                 if (k == 0)
                 {
-                    stringBuilder.Append(String.Format("Linha {0}:", k));
+                  
                     for (int i = 0; i < b.Length; i++)
                     {
 
+                        
                         anterior[i] = usaroutros[i, i] * b[i];
-            
-                    }
+                        stringBuilder.Append(String.Format("{0}      ", anterior[i]));
+                       
 
+                    }
+                    inicial = anterior;
+                    stringBuilder.Append(Environment.NewLine);
                 }
                 else
                 {
@@ -57,15 +64,18 @@ namespace SistemaCsharpComTela
                                 sum +=usaroutros[i,j] * anterior[j];
                             }
                         }
-                        anterior[i] = usaroutros[i,i] * (b[i] + (sum));
-                        stringBuilder.Append(String.Format("x{0}: é", i, anterior[i]));
+                        anterior[i] = Math.Round(usaroutros[i,i] * (b[i] + (sum)));
+                        erros = Math.Abs(inicial[i] - anterior[i]);
+                        stringBuilder.Append(String.Format("{0}   {1} ", anterior[i],erros));
+                        
                     }
-
+                    inicial = anterior;
                 }
+                stringBuilder.Append(Environment.NewLine);
                 k++;
             }
 
-            return anterior;
+            return stringBuilder.ToString();
         }
 
 
