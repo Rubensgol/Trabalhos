@@ -21,14 +21,14 @@
         }
         public double[,] Eliminacao(double[,] a, double[] b)
         {
-            
+
             double m;
             for (int k = 0; k < a.GetLength(0) - 1; k++)
             {
                 for (int i = k + 1; i < a.GetLength(0); i++)
                 {
                     m = a[i, k] / a[k, k];
-                    
+
                     a[i, k] = 0;
                     for (int j = k + 1; j < b.Length; j++)
                     {
@@ -39,10 +39,10 @@
             }
 
 
-    
+
             return a;
         }
-        public double Determinante(double[,]a,double[]b)
+        public double Determinante(double[,] a, double[] b)
         {
             double totm = 1;
             double[,] c = Eliminacao(a, b);

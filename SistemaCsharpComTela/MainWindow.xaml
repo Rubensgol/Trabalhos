@@ -53,7 +53,6 @@
             <ComboBox x:Name="opparada" Width="138" BorderBrush="#FF400D0D" OpacityMask="#FF990A0A" Background="{x:Null}" SelectionChanged="Opparada_SelectionChanged" >
                 <ListBoxItem Content="Quantida de linhas" Background="{x:Null}"/>
                 <ListBoxItem Content="Erro" Background="{x:Null}"/>
-                <ListBoxItem Content="Calcular determinante"/>
             </ComboBox>
             <Label x:Name="qtdlinhalabel" Content="Quantidade de linha"/>
             <TextBox x:Name="qtdlinhatxt" Height="23" TextWrapping="Wrap" Width="120"/>
