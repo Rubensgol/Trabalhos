@@ -150,6 +150,7 @@ namespace SistemaCsharpComTela
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             int tamanho = 2;
             if (op3.IsChecked == true)
                 tamanho = 4;
@@ -160,32 +161,212 @@ namespace SistemaCsharpComTela
 
             double[,] a = new double[tamanho, tamanho];
             double[] b = new double[tamanho];
-           
-                a[0, 0] = double.Parse(x11.Text);
-                a[0, 1] = double.Parse(x21.Text);
-                a[1, 0] = double.Parse(x12.Text);
-                a[1, 1] = double.Parse(x22.Text);
-                b[0] = double.Parse(y1.Text);
-                b[1] = double.Parse(y2.Text);
+                try
+                {
+                  a[0, 0] = double.Parse(x11.Text);    
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("linha 1 e coluna 1  erro")
+                    throw;
+                }
+                //a[0, 0] = double.Parse(x11.Text);
+                try
+                {
+                    a[0, 1] = double.Parse(x21.Text);    
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("coluna 1 linha 2 erro")
+                    throw;
+                }
+                //a[0, 1] = double.Parse(x21.Text);
+                try
+                {
+                   a[1, 0] = double.Parse(x12.Text); 
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("coluna 2 linha 1 erro")
+                    throw;
+                }
+                //a[1, 0] = double.Parse(x12.Text);
+                try
+                {
+                    a[1, 1] = double.Parse(x22.Text);    
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("colua 2 linha 2 erro")
+                    throw;
+                }
+                //a[1, 1] = double.Parse(x22.Text);
+                try
+                {
+                    b[0] = double.Parse(y1.Text);    
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("erro mt loko ai b[0]")
+                    throw;
+                }
+                //b[0] = double.Parse(y1.Text);
+                try
+                {
+                    b[1] = double.Parse(y2.Text);    
+                }
+                catch (System.Exception)
+                {
+                    MessageBox.Show("erro mt loko ai b[1]")
+                    throw;
+                }
+                //b[1] = double.Parse(y2.Text);
                 if(tamanho==3)
                 {
-                    a[0, 2] = double.Parse(x31.Text);
-                    a[1, 2] = double.Parse(x32.Text);
-                    a[2, 0] = double.Parse(x13.Text);
-                    a[2, 1] = double.Parse(x23.Text);
-                    a[2, 2] = double.Parse(x33.Text);
-                    b[2] = double.Parse(y3.Text);                  
+                    try
+                    {
+                        a[0, 2] = double.Parse(x31.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                      MessageBox.Show("coluna 1 linha 3 erro")  
+                        throw;
+                    }
+                    //a[0, 2] = double.Parse(x31.Text);
+                    try
+                    {
+                        a[1, 2] = double.Parse(x32.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 2 linha 3 erro")
+                        throw;
+                    }
+                    //a[1, 2] = double.Parse(x32.Text);
+                    try
+                    {
+                        a[2, 0] = double.Parse(x13.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 3 linha 1 erro")
+                        throw;
+                    }
+                    //a[2, 0] = double.Parse(x13.Text);
+                    try
+                    {
+                        a[2, 1] = double.Parse(x23.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 3 linha 2 erro")
+                        throw;
+                    }
+                    
+                    //a[2, 1] = double.Parse(x23.Text);
+                    try
+                    {
+                        a[2, 2] = double.Parse(x33.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 3 linha 3 erro")
+                        throw;
+                    }
+                    //a[2, 2] = double.Parse(x33.Text);
+                    try
+                    {
+                        b[2] = double.Parse(y3.Text);                      
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("b[2] erro mt loko")
+                        throw;
+                    }
+                    //b[2] = double.Parse(y3.Text);                  
                 }
                 if(tamanho==4)
                 {
-                    a[0, 3] = double.Parse(x14.Text);
-                    a[1, 3] = double.Parse(x24.Text);
-                    a[3, 0] = double.Parse(x41.Text);
-                    a[3, 1] = double.Parse(x42.Text);
-                    a[3, 2] = double.Parse(x43.Text);
-                    a[3, 3] = double.Parse(x44.Text);
-                    a[2, 3] = double.Parse(x34.Text);
-                    b[3] = double.Parse(y4.Text);
+                    try
+                    {
+                        a[0, 3] = double.Parse(x14.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 1 linha 4 erro")
+                        throw;
+                    }
+                    //a[0, 3] = double.Parse(x14.Text);
+                    try
+                    {
+                        a[1, 3] = double.Parse(x24.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 2 linha 4 erro")
+                        throw;
+                    }
+                    //a[1, 3] = double.Parse(x24.Text);
+                    try
+                    {
+                        a[3, 0] = double.Parse(x41.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 4 linha 1 erro")
+                        throw;
+                    }
+                    //a[3, 0] = double.Parse(x41.Text);
+                    try
+                    {
+                        a[3, 1] = double.Parse(x42.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 4 linha 2 erro")
+                        throw;
+                    }
+                    //a[3, 1] = double.Parse(x42.Text);
+                    try
+                    {
+                        a[3, 2] = double.Parse(x43.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 4 linha 3 erro")
+                        throw;
+                    }
+                    //a[3, 2] = double.Parse(x43.Text);
+                    try
+                    {
+                        a[3, 3] = double.Parse(x44.Text);    
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 4 linha 4 erro")
+                        throw;
+                    }
+                    //a[3, 3] = double.Parse(x44.Text);
+                    try
+                    {
+                        a[2, 3] = double.Parse(x34.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("coluna 3 linha 4 erro")
+                        throw;
+                    }
+                    //a[2, 3] = double.Parse(x34.Text);
+                    try
+                    {
+                        b[3] = double.Parse(y4.Text);
+                    }
+                    catch (System.Exception)
+                    {
+                        MessageBox.Show("b[3] erro")
+                        throw;
+                    }
+                    //b[3] = double.Parse(y4.Text);
                 }
                 CalculaSistemaLinear calcula = new CalculaSistemaLinear();
                 Jacobbi jacobbi = new Jacobbi();
