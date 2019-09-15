@@ -6,24 +6,107 @@
              mc:Ignorable="d"
              x:Class="Appv1.MainPage">
 
-    <Grid>
+    <Grid BackgroundColor="Aqua" RowSpacing="3" ColumnSpacing="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="40" />
+           
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="15" />
+            <ColumnDefinition Width="40" />
         </Grid.ColumnDefinitions>
-        <Entry x:Name="x12"  HeightRequest="40" Text="x12"  WidthRequest="40" Margin="10"/>
-        <Entry x:Name="x11"  HeightRequest="40" Text="x11"  WidthRequest="40" Margin="15"/>
-        <Entry x:Name="x21"  HeightRequest="40" Text="x21"  WidthRequest="40" Margin="20"/>
-        <Entry x:Name="x22"  HeightRequest="40" Text="x22"  WidthRequest="40" Margin="25,15"/>
-        <Entry x:Name="y1" Text="y1" Margin="30,40,0,0"  WidthRequest="80" HeightRequest="40" />
-        <Entry x:Name="y2" Text="y2" Margin="55,50,0,0"  WidthRequest="80" HeightRequest="40" />
+        <Entry x:Name="x12"  HeightRequest="40" HorizontalOptions="Start" WidthRequest="40"  Grid.Row="2" Grid.Column="0" VerticalOptions="Start"/>
+        <Entry x:Name="x11"  HeightRequest="40"   WidthRequest="40" HorizontalOptions="Start"  Grid.Row="1" Grid.Column="0" VerticalOptions="Start"/>
+        <Entry x:Name="x21"  HeightRequest="40"  WidthRequest="40" HorizontalOptions="Start" Grid.Row="1" Grid.Column="1" VerticalOptions="Start"/>
+        <Entry x:Name="x22"  HeightRequest="40"   WidthRequest="40" HorizontalOptions="Start" Grid.Row="2" Grid.Column="1" VerticalOptions="Start"/>
+        <Label Text="x2" Grid.Column="1" Grid.Row="0"/>
+        <Label Text="X1" Grid.Row="0"/>
+
+        <Label x:Name="labelx3" Text="x3" FontSize="12" Grid.Column="2" VerticalOptions="Start"/>
+        <Entry x:Name="x31"  HeightRequest="40"    WidthRequest="40" HorizontalOptions="Start" Grid.Row="1" Grid.Column="2" VerticalOptions="Start"/>
+        <Entry x:Name="x32"  HeightRequest="40"  WidthRequest="40" Grid.Row="2" HorizontalOptions="Start" Grid.Column="2" VerticalOptions="Start"/>
+        <Entry x:Name="x13"  HeightRequest="40"   WidthRequest="40" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0" VerticalOptions="Start"/>
+        <Entry x:Name="x23"  HeightRequest="40"   WidthRequest="40" HorizontalOptions="Start" Grid.Row="3" Grid.Column="1" VerticalOptions="Start"/>
+        <Entry x:Name="x33"  HeightRequest="40"   WidthRequest="40" Grid.Row="3" HorizontalOptions="Start" Grid.Column="2" VerticalOptions="Start"/>
+
+        <Label x:Name="labelx4" Text="x4" Grid.Column="3"/>
+        <Entry x:Name="x41"  HeightRequest="40"   WidthRequest="40" Grid.Row="1" HorizontalOptions="Start" Grid.Column="3" VerticalOptions="Start"/>
+        <Entry x:Name="x42"  HeightRequest="40"   WidthRequest="40" Grid.Row="2" HorizontalOptions="Start" Grid.Column="3" VerticalOptions="Start"/>
+        <Entry x:Name="x43"  HeightRequest="40"   WidthRequest="40" Grid.Row="3" HorizontalOptions="Start" Grid.Column="3" VerticalOptions="Start"/>
+        <Entry x:Name="x14"  HeightRequest="40"   WidthRequest="40"  Grid.Row="4" HorizontalOptions="Start" Grid.Column="0" VerticalOptions="Start"/>
+        <Entry x:Name="x24"  HeightRequest="40"   WidthRequest="40" Grid.Row="4" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Start"/>
+        <Entry x:Name="x34"  HeightRequest="40"   WidthRequest="40" Grid.Row="4" HorizontalOptions="Start" Grid.Column="2" VerticalOptions="Start"/>
+        <Entry x:Name="x44"  HeightRequest="40"   WidthRequest="40" Grid.Row="4" HorizontalOptions="Start" Grid.Column="3" VerticalOptions="Start"/>
+
+        <Entry x:Name="y1"  WidthRequest="40" HeightRequest="40"  Grid.Row="1" HorizontalOptions="Start" Grid.Column="5" VerticalOptions="Start"/>
+        <Entry x:Name="y2"   WidthRequest="40" HeightRequest="40"  Grid.Row="2"  HorizontalOptions="Start"  Grid.Column="5" VerticalOptions="Start"/>
+        <Entry x:Name="y3" HeightRequest="40"  WidthRequest="40"  Grid.Row="3" HorizontalOptions="Start" Grid.Column="5" VerticalOptions="Start"/>
+        <Label x:Name="labely3" Text="y3" Grid.Row="3" Grid.Column="4" VerticalOptions="Start"/>
+        <Label x:Name="labely4" Text="y4" Grid.Row="4" Grid.Column="4" VerticalOptions="Start"/>
+        <Entry x:Name="y4" HeightRequest="40"  WidthRequest="40" Grid.Row="4" HorizontalOptions="Start" Grid.Column="5" VerticalOptions="Start"/>
+        <Label x:Name="labely1" Text="y1" Grid.Row="1" Grid.Column="4" VerticalOptions="Start"/>
+        <Label x:Name="labely2" Text="y2" Grid.Row="2" Grid.Column="4" VerticalOptions="Start"/>
+
+        <Picker x:Name="optamanho"  Grid.Row="5"   Grid.ColumnSpan="5" BackgroundColor="Azure"
+            Title="Seleciona quantidade de linhas"
+        TitleColor="Red" HorizontalOptions="Start" VerticalOptions="Start" SelectedIndex="1">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>2 variaves</x:String>
+                    <x:String>3 variaveis</x:String>
+                    <x:String>4 variaves</x:String>
+                    
+                </x:Array>
+            </Picker.ItemsSource>
+            
+        </Picker>
+        <Picker x:Name="optipo"  Grid.Row="5"  Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="5" BackgroundColor="Azure"
+            Title="Selecione a opção "
+        TitleColor="Red" HorizontalOptions="Start" VerticalOptions="Start" SelectedIndex="1">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Jacobbi</x:String>
+                    <x:String>Gauss</x:String>
+                    <x:String>determinante</x:String>
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+         
+        <Button Text="Calcular" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0" IsEnabled="False" />
+        <Button Text="Sair" HorizontalOptions="Start" Grid.Row="6" VerticalOptions="Start"  Grid.Column="2" Grid.ColumnSpan="3"   />
+
+            
+        <Picker x:Name="jacobiparada"  Grid.Row="6"  Grid.RowSpan="2" Grid.ColumnSpan="5" Grid.Column="5" BackgroundColor="Azure"
+            Title="Selecione a opção "
+        TitleColor="Red" HorizontalOptions="Start" VerticalOptions="Start" SelectedIndex="1">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Erro</x:String>
+                    <x:String>Quantidade de linha</x:String>
+                  
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label x:Name="erro" Text="Erro" Grid.Row="7" Grid.Column="0" VerticalOptions="Start"/>
+        <Editor x:Name="parada" Grid.Column="0" Grid.Row="8" VerticalOptions="Start" />
     </Grid>
-   
-   
+    
+
+
 </ContentPage>
 

@@ -16,7 +16,7 @@
         <Button Content="Calcular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,348,0,0" Background="#FF77FFEC" Click="Button_Click"/>
         <Label HorizontalAlignment="Left" Margin="15,92,0,0" VerticalAlignment="Top"/>
         <Label Content="X1" Margin="10,10,0,0" HorizontalAlignment="Left" Width="24" RenderTransformOrigin="0.625,1.423" Height="26" VerticalAlignment="Top"/>
-        <Label Content="x2&#xD;&#xA;" HorizontalAlignment="Left" Margin="80,10,0,0" RenderTransformOrigin="0.249,0.766" Height="42" VerticalAlignment="Top"/>
+        <Label Content="x2" HorizontalAlignment="Left" Margin="80,10,0,0" RenderTransformOrigin="0.249,0.766" Height="42" VerticalAlignment="Top"/>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.193,0.917" Margin="118,92,0,0"/>
         <Label x:Name="labely1" Content="y1" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="4.274,-0.457" Margin="273,40,0,0"/>
         <Label x:Name="labely2" Content="y2" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="7.96,3.504" Margin="273,92,0,0"/>
