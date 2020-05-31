@@ -1,4 +1,3 @@
 # Trabalhos
 
-Trabalho interdisciplinar que estou desenvolvendo, que envolve calculo numerico e algebra linear, com ajuda de meus colegas e alguns professores 
-
+Trabalho interdisciplinar que estou desenvolvendo, que envolve calculo numerico e algebra linear, para soluções de sistemas definidos com limite de variaveis
